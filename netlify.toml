@@ -1,0 +1,17 @@
+[build]
+  command = "npm run build"
+  publish = "."
+
+[context.production]
+  command = "npm start"
+  
+[context.deploy-preview]
+  command = "npm start"
+  
+[context.branch-deploy]
+  command = "npm start"
+  
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
