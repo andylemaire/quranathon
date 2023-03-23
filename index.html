@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ramadan Quran-A-Thon 2023</title>
+  <style>
+    /* Add styling for form elements */
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="text"], input[type="number"] {
+      padding: 5px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 3px;
+      box-shadow: 1px 1px 3px #ccc;
+    }
+    input[type="submit"] {
+      background-color: #b53434;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    /* Add styling for leaderboard table */
+    table {
+      border-collapse: collapse;
+      margin-top: 20px;
+      width: 100%;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #b53434;
+      color: #fff;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    .rank {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ramadan Quran-A-Thon</h1>
+  <form id="leaderboard-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="amount">Amount recited (Juz'): </label>
+    <input type="number" id="amount" name="amount" min="1" required>
+    <input type="submit" value="Submit">
+  </form>
+  <table id="leaderboard-table">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Name</th>
+        <th>Amount recited (Juz')</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  <script src="app.js"></script>
+</body>
+</html>
